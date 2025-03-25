@@ -1,0 +1,87 @@
+$background-color: #040f0f;
+$foreground-color: #2eec71;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: rgb(140, 253, 10);
+}
+
+a:visited {
+  color: rgb(92, 172, 32);
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 700;
+  font: 1em sans-serif;
+  line-height: 1.6em;
+  background-color: #040f0f;
+  color: #fcfffc;
+}
+
+.navbar {
+  width: 100%;
+  padding: 20px;
+  background-color: #2ba84a;
+  transition: all;
+  transition-duration: 0.3s;
+}
+
+.navbar:hover {
+  background-color: #248232;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+  font-size: large;
+}
+
+.navbar ul {
+  list-style-type: none;
+  display: flex;
+}
+
+.logo {
+  font-size: x-large;
+  color: white;
+  font-style: bold;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.my-form {
+  padding: 30px;
+}
+
+.my-form .form-group {
+  padding-bottom: 15px;
+}
+
+.my-form label {
+  display: block;
+}
+
+.my-form input[type="text"],
+.my-form textarea {
+  padding: 8px;
+  width: 100%;
+}
+
+.button {
+  background-color: red;
+  border: none;
+  padding: 10px 15px;
+}
+
+.button:hover {
+  background-color: blueviolet;
+}
