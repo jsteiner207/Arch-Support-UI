@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import { useState, useRef, useEffect } from "react";
-import Table from "./table/Table";
+import Table from "../components/table/Table";
 import { getBills } from "../api/billService";
 import { Link } from "react-router-dom";
 import { dateParser } from "../helper/helper";

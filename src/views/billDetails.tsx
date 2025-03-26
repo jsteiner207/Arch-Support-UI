@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { useParams } from "react-router-dom";
 import { getBillDetails } from "../api/billService";
-import Table from "./table/Table";
+import Table from "../components/table/Table";
 import { dateParser } from "../helper/helper";
 
 interface Action {
@@ -15,9 +15,6 @@ interface Action {
 
 function BillDetails() {
   const { id } = useParams();
-
-  if (!id) return <div>id not found</div>;
-
   const decodedId = decodeURIComponent(id);
 
   const { data, isLoading } = useQuery({
@@ -28,8 +25,9 @@ function BillDetails() {
       }
       return getBillDetails(decodedId);
     },
-    staleTime: 500000,
   });
+
+  if (!id) return <div>id not found</div>;
 
   if (isLoading) return <h1>loading</h1>;
   return (

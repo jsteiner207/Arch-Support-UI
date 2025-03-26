@@ -5,7 +5,7 @@ interface TableProps {
   children: ReactNode;
 }
 
-const Table = ({ children }: TableProps) => {
+const Table: React.FC<TableProps> = ({ children }: TableProps) => {
   return (
     <div className="box-1">
       <table>{children}</table>
