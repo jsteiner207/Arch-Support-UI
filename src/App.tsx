@@ -1,11 +1,12 @@
 import "./app.scss";
-import BillView from "./views/billview";
+import BillView from "./views/billView";
 import BillDetails from "./views/billDetails";
 import EventView from "./views/eventView";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { Link, Route, Routes } from "react-router-dom";
 import SignUp from "./components/signup";
 import NotFound from "./views/NotFound";
+import PeopleView from "./views/peopleView";
 
 function App() {
   return (
@@ -24,6 +25,9 @@ function App() {
               <Link to="/events">Events</Link>
             </li>
             <li>
+              <Link to="/people">People</Link>
+            </li>
+            <li>
               <Link to="/sign-up">Sign up</Link>
             </li>
           </ul>
@@ -35,6 +39,7 @@ function App() {
         <Route path="/bills" element={<BillView />} />
         <Route path="/bills/:id" element={<BillDetails />} />
         <Route path="/events" element={<EventView />} />
+        <Route path="/people" element={<PeopleView />} />
         <Route path="/sign-up" element={<SignUp />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

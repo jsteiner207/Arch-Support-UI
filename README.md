@@ -44,14 +44,20 @@ npm run dev
 
 4. Account creation to support legislation tracking.
 
-5. Adding events page.
-
 # Images
 
 ### Current Legislation Search page
 
 ![Alt Text](src/imgs/legislation.png)
 
-### CurrentScreen displayed when clicking on a bill
+### Current Screen displayed when clicking on a bill
 
 ![Alt Text](src/imgs/BillDetail.png)
+
+### Current Event Search Page
+
+![Alt Text](src/imgs/events.png)
+
+### Current People Search Page
+
+![Alt Text](src/imgs/people.png)
