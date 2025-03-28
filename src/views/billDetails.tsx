@@ -57,6 +57,28 @@ function BillDetails() {
           ))}
         </tbody>
       </Table>
+
+      <br />
+      <h1>Sponsorships</h1>
+
+      <Table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Party</th>
+            <th>Role</th>
+          </tr>
+        </thead>
+        <tbody>
+          {data.sponsorships.map((sponsor: any) => (
+            <tr key={sponsor.id}>
+              <td>{sponsor.name}</td>
+              <td>{sponsor.person.party}</td>
+              <td>{sponsor.person.current_role.title}</td>
+            </tr>
+          ))}
+        </tbody>
+      </Table>
     </>
   );
 }

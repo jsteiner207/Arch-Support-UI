@@ -7,6 +7,7 @@ import { Link, Route, Routes } from "react-router-dom";
 import SignUp from "./components/signup";
 import NotFound from "./views/NotFound";
 import PeopleView from "./views/peopleView";
+import CommitteeView from "./views/committeeView";
 
 function App() {
   return (
@@ -25,6 +26,9 @@ function App() {
               <Link to="/events">Events</Link>
             </li>
             <li>
+              <Link to="/committees">Committees</Link>
+            </li>
+            <li>
               <Link to="/people">People</Link>
             </li>
             <li>
@@ -38,6 +42,7 @@ function App() {
         <Route path="/" element={<h1>hello</h1>} />
         <Route path="/bills" element={<BillView />} />
         <Route path="/bills/:id" element={<BillDetails />} />
+        <Route path="/committees" element={<CommitteeView />} />
         <Route path="/events" element={<EventView />} />
         <Route path="/people" element={<PeopleView />} />
         <Route path="/sign-up" element={<SignUp />} />
