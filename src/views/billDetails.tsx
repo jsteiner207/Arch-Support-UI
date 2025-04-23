@@ -38,6 +38,17 @@ function BillDetails() {
       <h2>Origin: {data.from_organization.name}</h2>
       <br />
 
+      <h1>Documents</h1>
+      <br />
+      <ul>
+        {data.documents.map((document) => (
+          <li key={document.id}>
+            <a href={document.links[0].url}>{document.note}</a>
+          </li>
+        ))}
+      </ul>
+      <br />
+
       <h1>Actions</h1>
       <Table>
         <thead>
