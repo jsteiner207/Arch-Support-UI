@@ -1,43 +1,45 @@
 .box-1 {
-    display: flex;
-    justify-content: center;
-    position: relative;
-    border-style: solid;
-    border-radius: 12px;
-    border-width: 5px;
-    border-color: #248232;
-    padding: 40px;
-    width: 85%;
-    background-color: #2D4A4A;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  border-style: solid;
+  border-radius: 12px;
+  border-width: 5px;
+  border-color: #248232;
+  padding: 40px;
+  width: 85%;
+  background-color: #2d4a4a;
 }
 
 table {
-    border-collapse: collapse;
-    margin: 25px 0;
-    font-size: 0.9em;
-    width: 80%;
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  width: 80%;
 }
 
 table thead tr {
-    background-color: #248232;
-    text-align: left;
-    font-weight: bold;
+  background-color: #248232;
+  text-align: left;
+  font-weight: bold;
 }
 
-table th, table td {
-    padding: 12px 15px;
+table th,
+table td {
+  padding: 12px 15px;
 }
 
 table tbody tr {
-    background-color: rgb(35, 35, 35);
-    color: rgb(255, 255, 255);
+  background-color: rgb(35, 35, 35);
+  color: rgb(255, 255, 255);
 }
 
-table tbody tr:nth-of-type(even){
-    background-color: #000000;
-    color: white;
+table tbody tr:nth-of-type(even) {
+  background-color: #000000;
+  color: white;
 }
 
 table td:first-child {
-    border-left: solid 3px black;
+  border-left: solid 3px black;
 }

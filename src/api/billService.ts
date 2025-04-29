@@ -1,15 +1,9 @@
 const BASE_URL = import.meta.env.VITE_API_URL;
-const X_API_KEY = import.meta.env.VITE_API_KEY;
 
 // TODO add JSDoc overhead
-export const getBills = async (pageNumber: number) => {
+export const getBills = async (pageNumber: number, search: string) => {
   const response = await fetch(
-    `${BASE_URL}/bills?jurisdiction=Missouri&per_page=20&page=${pageNumber}`,
-    {
-      headers: {
-        "x-api-key": X_API_KEY,
-      },
-    }
+    `${BASE_URL}/bills?jurisdiction=Missouri&per_page=20&page=${pageNumber}&q=${search}`
   );
   const data = await response.json();
   return data;
@@ -17,14 +11,7 @@ export const getBills = async (pageNumber: number) => {
 
 // TODO add JSDoc overhead
 export const getBillDetails = async (billId: string) => {
-  const response = await fetch(
-    `${BASE_URL}/bills/${billId}?include=actions&include=votes&include=documents&include=sponsorships`,
-    {
-      headers: {
-        "x-api-key": X_API_KEY,
-      },
-    }
-  );
+  const response = await fetch(`${BASE_URL}/bills/${billId}`);
   const data = await response.json();
   return data;
 };
