@@ -6,11 +6,7 @@ interface TableProps {
 }
 
 const Table: React.FC<TableProps> = ({ children }: TableProps) => {
-  return (
-    <div className="box-1">
-      <table>{children}</table>
-    </div>
-  );
+  return <table>{children}</table>;
 };
 
 export default Table;
